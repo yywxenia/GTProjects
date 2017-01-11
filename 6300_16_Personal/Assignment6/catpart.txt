@@ -1,0 +1,59 @@
+
+	
+# Strings
+  The number of inputs (FROM and TO):
+	Omitted.				[error][property noINPUTS]			
+	More than one.				[error]
+	One. 			
+  Input Strings(FROM) Type:
+	Not string type.			[error][property invalidFROM]
+	Valid string type. 
+  Input Strings(TO) Type:
+	Not string type.			[error][property invalidTO]
+	Valid string type.
+  Input Strings(FROM) Length:
+	Empty.					[if !noINPUTS && !invalidFROM][error]
+	One character.				[if !noINPUTS && !invalidFROM][single]
+	More than one character.		[if !noINPUTS && !invalidFROM]
+	Longer than the file.			[if !noINPUTS && !invalidFROM][single]
+  Input Strings(TO) Length:
+	Empty.					[if !noINPUTS && !invalidTO]
+	Not empty.				[if !noINPUTS && !invalidTO]
+	Longer than the file.			[if !noINPUTS && !invalidTO][single]
+  
+# Files
+  Targeted file numbers:
+	Zero.				        [error]
+	One.					
+	Many.					
+	Maxi number of files.			[single]
+  File content:
+	Empty.					[single][property emptyfile]
+	Not empty.
+  Wether occur considering case:
+	Yes.					[property Sensitive]
+	No.
+  Total target strings occurrences in file:
+	None.					[property nothing][if !emptyfile][single]
+	Only one.				[property oneCount]
+	Many.				
+
+ 
+#File Name:
+  Filename presented:			
+	No file with the presented name.	[single]		
+	No presented file name.			[error]
+	Valid presented file name.		
+
+# OPT
+  OPT used:
+	None.					
+	>Four.					[error]	
+	i.			                [if !nothing]
+	i,b.					[if !nothing]
+	f.					[if Sensitive && !oneCount]
+	l.					[if Sensitive && !oneCount]
+	f,l,b.					[if !oneCount]
+	f,l,i,b.				[if !oneCount]	
+
+
