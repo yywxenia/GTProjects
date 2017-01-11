@@ -1,0 +1,8 @@
+Creation and Data Stub SQL files are located within the `application/sql` directory
+Login - login.py
+Add Incident - add_incident.py
+Add Resource - add_resource.py
+Search For Resources - search_resources.py
+View Resource Search Results - search_results.py
+View Resource Status - resource_status.py
+View Resource Report - resource_report.py

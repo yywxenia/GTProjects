@@ -1,0 +1,5 @@
+name             'App'
+maintainer       'gatech'
+description      'Installs/Configures DB Concepts App'
+depends          'mysql'
+depends          'poise-python'
