@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Grocery List: test"
+        android:layout_centerHorizontal="true"
+        android:textSize="70px"
+        android:id="@+id/listTitle"/>
+    <Button
+        android:id="@+id/addItemG"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/listTitle"
+        android:text="EDIT" />
+    <Button
+        android:id="@+id/clearAll"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/addItemG"
+        android:layout_below="@id/listTitle"
+        android:text="Clear All" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/clearAll"
+        android:layout_below="@id/listTitle"
+        android:text="Save" />
+
+    <ListView android:id="@+id/listView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/clearAll"/>
+
+</RelativeLayout>
